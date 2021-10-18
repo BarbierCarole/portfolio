@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/_reset.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/menu-move.scss">
+    <link rel="stylesheet" href="./tousLesTests/stylesass.css">
+    
+    <!-- <script src="https://kit.fontawesome.com/f7955d909d.js" crossorigin="anonymous"></script> -->
+        
+    <link rel="stylesheet" href="/tousLesTests/style-cat.css">
+    <link rel="stylesheet" href="./tousLesTests/button-on-off-red.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet">
+
+    <title>Carole Barbier, votre développeur web / web mobile dans le >Var</title>
+</head>
+<body>
+    <main id="main">
+        <div class="wrapper" >
+            <section id="accueil" class="slide accueil">
+                <div class="content-header">
+                    <div class="logo">
+                        <!-- <img  class="logoImg" src="./img/Logo-CaroleBarbier-CB-bg-bois.png" /> -->
+                        <img  class="logoImg" src="./img/Logo-CaroleBarbier-CB-sans-bg.png" />
+                    </div>  
+                    <button id="menuButton" class="menuButton" 
+                    onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))" aria-label="Main Menu"> 
+                        <svg width="70" height="70" viewBox="0 0 100 100">
+                          <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+                          <path class="line line2" d="M 20,50 H 80" />
+                          <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+                        </svg>
+                    </button>
+                    <nav class="main-nav">
+                        <ul class="ul" id="buttonMenuActive" onclick="this.classList.toggle('opened')">
+                            <li ><a class="btn active" href="#accueil">Accueil</a></li>
+                            <li ><a class="btn" href="#competences">Mes compétences</a></li>
+                            <li ><a class="btn" href="#realisations">Mes réalisations</a></li>
+                            <li ><a class="btn" href="#mechoisir">Pourquoi me choisir ?</a></li>
+                            <li ><a class="btn" href="#contact">Contact</a></li>
+                            <li class="contactMenu">--------------</li>
+                            <li class="contactMenu">Carole Barbier <br />
+                            59, impasse des genêts<br />
+                            83460 Taradeau<br /><br />
+                            Tél : 06 72 70 10 14<br /><br />
+                            Email : contact@carolebarbier.com<br /><br />
+                            linkedIn : <a href="https://www.linkedin.com/in/carole-barbier" style="text-transform: lowercase;">carole-barbier</a></li>
+                        </ul>
+                    </nav>
+                    
+                </div>
+                <div class="intro">
+                    <h1>Bienvenue dans mon bureau ! </h1>
+                    <p>Du développement web / web mobile et du webdesign sur-mesure pour un visuel unique, accrocheur et qui siéra parfaitement à votre entreprise ! Et bien sûr le référencement n'est pas en reste !</p>
+                    <div class='scrolldown'>
+                        <div class="chevrons">
+                            <div class="hand">
+                                <i class="fas fa-hand-point-up"></i>
+                            </div>
+                            <div class='chevronright'></div>
+                            <div class='chevronright'></div>
+                        </div>
+                    </div>
+                </div>
+                
+            </section>
+
+            <section id="competences" class="slide competences">
+                <div id="textCompetences" class="btn-shine">
+                    Visionnez mes compétences ->
+                </div>
+                <div class="container">
+                    
+                        <label  id="myBtn" class="switch">
+                            <input id="inputCheckbox" type="checkbox" />
+                            <div class="button">
+                              <div class="light"></div>
+                              <div class="dots"></div>
+                              <div class="characters"></div>
+                              <div class="shine"></div>
+                              <div class="shadow"></div>
+                            </div>
+                        </label>     
+                    
+                    <div id="content-cat" class="content">
+                        <div id="bgSoundCat" class="bgSoundCat"></div>
+                        <div id="cat" class="cat">
+                    
+                            <div class="ears">
+                                <span></span>
+                                <span></span>
+                            </div>
+                        
+                            <div class="eyes">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        
+                            <div class="nose">
+                                <span></span>
+                                <span></span>
+                            </div>
+                        
+                            <div class="mouth">3</div>
+                    
+                            <div class="paws">
+                                <span></span>
+                                <span></span>
+                            </div>
+                        
+                            <div class="tail"></div>
+                            
+                        </div>
+                    
+                        <div class="wall"></div>
+                         
+                        <div id="ronron" class="ronron">
+                            <span>.</span>
+                            <span>.</span>
+                            <span>.</span>
+                            <span>r</span>
+                            <span>o</span>
+                            <span>n</span>
+                            <span>r</span>
+                            <span>o</span>
+                            <span>n</span>
+                            <span>.</span>
+                            <span>.</span>
+                            <span>.</span>
+                            
+                        </div>
+                    </div> 
+                    <div class="content-competences">
+                        
+
+                        <div class="content-whiteboard">
+                            <!-- Trigger/Open The Modal -->                            
+                            <!-- The Modal -->
+                            <div id="myCompetences" class="modal">
+                                <!-- ModalOff to switch off light button -->
+                                <div id="modalOff" class="modalOff">
+
+                                    <!-- Modal content -->
+                                    <div class="modal-content-competences">
+                                        <!-- <span class="close">&times;</span> -->
+                                        <!-- animated css perspective -->
+                                        <!-- <div class="btn">Tirer l'écran !</div> -->
+                                        <div id="whiteboard" class="whiteboard">
+                                            <div class="whiteboard__header"></div>
+                                            <div class="whiteboard__content">
+                                                <div onclick="pauseVideo()" class="btn-closed">
+                                                    <div class="close-container">
+                                                        <div class="leftright"></div>
+                                                        <div class="rightleft"></div>
+                                                        <label class="label-close">Fermer</label>
+                                                    </div>
+                                                </div>
+                                                
+                                                <video id="video-competences" controls width="100%">
+                                                    <source src="/videos/Présentation-de-mes-competences-v4-vol-coup.mp4"
+                                                            type="video/mp4">
+                                                
+                                                    Sorry, your browser doesn't support embedded videos.
+                                                </video>
+                                                
+                                            </div>
+                                            <div class="whiteboard__footer">
+                                                <span class="tirette">!</span>                    
+                                            </div> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>   
+                </div>
+            </section>
+
+            <section id="realisations" class="slide realisations">
+                
+                
+            </section>
+            <section id="mechoisir" class="slide mechoisir">
+                
+            </section>
+            <section id="contact" class="slide contact">
+                <div class="logo">
+                   
+                </div>    
+            </section>
+
+        </div>
+    </main>
+    <script src="./script/script-wheel.js"></script>
+    <script src="./script/script-menu.js"></script>
+    <script src="./script/sound-cat.js"></script>
+    <script src="./script/script-modale.js"></script>
+    <script src="./script/script-draggable-cat.js"></script>
+    <script src="./script/sound-competence.js"></script>
+    <script src="./script/script-video.js"></script>
+    
+    
+    
+</body>
+</html>

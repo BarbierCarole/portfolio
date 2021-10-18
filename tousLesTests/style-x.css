@@ -1,0 +1,142 @@
+/* navigation horizontale */
+.slide {
+    width: 100vw;
+    height: 100vh;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 500vw;
+    transform: rotate(90deg) translateY(-100vh);
+    transform-origin: top left;
+
+}
+.outer-wrapper {
+    width: 100vh;
+    height: 100vw;
+    transform: rotate(-90deg) translateX(-100vh);
+    transform-origin: top left;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position: absolute;
+    scrollbar-width: none;    
+    -ms-overflow-style: none;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+
+.two {
+    background-image:  url("../img/desk-pc.jpg");
+        /* background-size: contain;
+        background-repeat: no-repeat; */
+        background-position:  center center; 
+        background-size: cover;
+        touch-action: manipulation;
+}
+
+.three {
+    background-color:darkcyan;
+    touch-action: manipulation;
+}
+.four {
+    background-color:deepskyblue;
+    touch-action: manipulation;
+}
+.five {
+    background-color:lightseagreen;
+    touch-action: manipulation;
+}
+
+/* page accueil */
+
+.slide.one {
+    display: flex;
+    justify-content: center;
+    touch-action: manipulation;
+}
+
+@keyframes light {
+    from {filter:brightness(1); }
+    to {filter:brightness(1.75); }
+    
+}
+@keyframes init {
+    from {filter:brightness(1.75); }
+    to {filter:brightness(1); }
+    
+}
+
+.logo {
+    transform: translate(2%, 5%); /* pour le positionner au dessus du canapé */ 
+    cursor: pointer;
+    animation: 1s init; 
+}
+
+.logo:hover {
+    filter:brightness(1.75);
+    /*transition: 1s; */
+    animation: 1s light; 
+   
+}
+
+ 
+ /* smarthphone*/
+ @media only screen and (max-width: 600px) and (orientation: portrait) { 
+
+    .one {
+        background-image:  url("../img/grey-vertical.jpg");
+        /* background-size: contain;
+        background-repeat: no-repeat; */
+        background-position:  center center; 
+        background-size: cover;
+        touch-action: manipulation;
+    }
+    .logoImg {
+        width: 148px; 
+        height: 162px;
+    }
+ }
+/* smartphone orientation paysage */
+ @media only screen and (max-width: 1280px) and (orientation: landscape) { 
+
+    .one {
+        background-image:  url("../img/grey-horizontal.jpg");
+        /* background-size: contain;
+        background-repeat: no-repeat; */
+        background-position:  center center; 
+        background-size: cover;
+        touch-action: manipulation;
+    }
+    .logoImg {
+        width: 148px; 
+        height: 162px;
+    }
+ }
+
+ /* ecran pc les plus courants */
+ @media only screen and (min-width: 1281px) { 
+    .one {
+        background-image:  url("../img/grey-horizontal.jpg");
+        /* background-size: contain;
+        background-repeat: no-repeat; */
+        background-position:  center center; 
+        background-size: cover;
+        touch-action: manipulation;
+    }
+
+    .logoImg {
+        width: 296px; 
+        height: 324px;
+    }
+}
+
+/* grands écrans 4k */
+
+@media (min-width: 1921px) { 
+    .logoImg {
+        width: 366px; 
+        height: 468px;
+    }
+}

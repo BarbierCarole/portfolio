@@ -1,0 +1,332 @@
+@import url("https://fonts.googleapis.com/css2?family=Stick+No+Bills&display=swap");
+.whiteboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60vw;
+  height: 80vh;
+}
+.whiteboard__header {
+  width: 100%;
+  height: 3vh;
+  background-color: #666;
+}
+.whiteboard__content {
+  width: 100%;
+  height: 70vh;
+  opacity: 0;
+  background-color: #eee;
+  overflow: hidden auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.whiteboard__footer {
+  width: 100%;
+  height: 3vh;
+  background-color: #7e7e7e;
+  display: flex;
+  justify-content: center;
+  margin-top: -80vh;
+}
+.whiteboard__footer span {
+  color: #ffc44c;
+  font-size: 64px;
+  cursor: pointer;
+}
+
+.whiteboard-closed {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60vw;
+  height: 80vh;
+}
+.whiteboard-closed > .whiteboard__header {
+  width: 100%;
+  height: 3vh;
+  background-color: #666;
+}
+.whiteboard-closed > .whiteboard__content {
+  width: 100%;
+  height: 70vh;
+  opacity: 1;
+  background-color: #eee;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.whiteboard-closed > .whiteboard__footer {
+  width: 100%;
+  height: 3vh;
+  background-color: #7e7e7e;
+  display: flex;
+  justify-content: center;
+  margin-top: -80vh;
+}
+.whiteboard-closed > .whiteboard__footer span {
+  color: #ffc44c;
+  font-size: 64px;
+}
+
+@keyframes whiteboard-content {
+  0% {
+    transform: scaleY(0);
+  }
+  35%, 100% {
+    opacity: 1;
+  }
+  97% {
+    transform: scaleY(1);
+  }
+  100% {
+    transform: scaleY(0.96);
+  }
+}
+@keyframes whiteboard-footer {
+  0% {
+    transform: translateY(10vh);
+  }
+  97% {
+    transform: translateY(80vh);
+  }
+  100% {
+    transform: translateY(76vh);
+  }
+}
+@keyframes whiteboard-footer-span {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(45deg);
+  }
+  50% {
+    transform: rotate(-40deg);
+  }
+  70% {
+    transform: rotate(35deg);
+  }
+  80% {
+    transform: rotate(-30deg);
+  }
+  90% {
+    transform: rotate(20deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+/*****************************/
+/* pour refermer le tableau */
+@keyframes whiteboard-content-closed {
+  0% {
+    transform: scaleY(0.96);
+  }
+  0%, 100% {
+    opacity: 1;
+  }
+  20% {
+    transform: scaleY(1);
+  }
+  100% {
+    transform: scaleY(0);
+  }
+}
+@keyframes whiteboard-footer-closed {
+  0% {
+    transform: translateY(76vh);
+  }
+  20% {
+    transform: translateY(80vh);
+  }
+  100% {
+    transform: translateY(10vh);
+  }
+}
+@keyframes whiteboard-footer-span-closed {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(45deg);
+  }
+  50% {
+    transform: rotate(-40deg);
+  }
+  70% {
+    transform: rotate(35deg);
+  }
+  80% {
+    transform: rotate(-30deg);
+  }
+  90% {
+    transform: rotate(20deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.whiteboard > .whiteboard__content {
+  transform-origin: 50% 0%;
+  animation: whiteboard-content 1500ms 150ms both;
+}
+.whiteboard > .whiteboard__content video {
+  transform-origin: 50% 0%;
+  animation: whiteboard-content 1500ms 150ms both;
+}
+.whiteboard > .whiteboard__footer {
+  transform-origin: 50% 0%;
+  animation: whiteboard-footer 1500ms 150ms both;
+}
+.whiteboard > .whiteboard__footer span {
+  transform-origin: 50% 0%;
+  animation: whiteboard-footer-span 1000ms 1650ms both;
+}
+
+.whiteboard-closed > .whiteboard__content {
+  transform-origin: 50% 0%;
+  animation: whiteboard-content-closed 1000ms 150ms both;
+}
+.whiteboard-closed > .whiteboard__content video {
+  transform-origin: 50% 0%;
+  animation: whiteboard-content-closed 1000ms 150ms both;
+}
+.whiteboard-closed > .whiteboard__footer {
+  transform-origin: 50% 0%;
+  animation: whiteboard-footer-closed 1000ms 150ms both;
+}
+.whiteboard-closed > .whiteboard__footer span {
+  transform-origin: 50% 0%;
+  animation: whiteboard-footer-span-closed 1000ms 1000ms both;
+}
+
+/**************************************/
+/* bouton close */
+.close-container {
+  position: absolute;
+  margin: auto;
+  width: 50px;
+  height: 50px;
+  margin-top: 15px;
+  cursor: pointer;
+  right: 10px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 25px;
+  box-shadow: #F4A259;
+  z-index: 10;
+}
+
+.leftright {
+  height: 4px;
+  width: 50px;
+  position: absolute;
+  margin-top: 24px;
+  background-color: #F4A259;
+  border-radius: 2px;
+  transform: rotate(45deg);
+  transition: all 0.3s ease-in;
+}
+
+.rightleft {
+  height: 4px;
+  width: 50px;
+  position: absolute;
+  margin-top: 24px;
+  background-color: #F4A259;
+  border-radius: 2px;
+  transform: rotate(-45deg);
+  transition: all 0.3s ease-in;
+}
+
+label {
+  color: #050505;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 0.6em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.3s ease-in;
+  opacity: 0;
+}
+
+.label-close {
+  margin: 60px 0 0 5px;
+  position: absolute;
+}
+
+.close-container:hover .leftright {
+  transform: rotate(-45deg);
+  background-color: #F25C66;
+}
+.close-container:hover .rightleft {
+  transform: rotate(45deg);
+  background-color: #F25C66;
+}
+.close-container:hover label {
+  opacity: 1;
+}
+
+.circle-1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 30px;
+  width: 180px;
+  height: 180px;
+  border-radius: 180px;
+  background: #f2865c;
+  box-shadow: -4px -4px 5px #b5b5b5, 5px 5px 7px #ffffff;
+  color: #ddd;
+  -webkit-text-stroke: 1px white;
+  font-size: 54px;
+  font-family: "Stick No Bills", sans-serif;
+}
+
+.circle-1-1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 20px;
+  width: 90px;
+  height: 90px;
+  border-radius: 150px;
+  background: linear-gradient(145deg, #F25C66, #F4A259);
+}
+
+.btn-shine {
+  position: relative;
+  left: 35vw;
+  top: 50vh;
+  transform: translate(-50%, -50%);
+  padding: 12px 48px;
+  color: #fff;
+  background: linear-gradient(to right, #4d4d4d 0, #fff 10%, #4d4d4d 20%);
+  background-position: 0;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 7s infinite linear;
+  animation-fill-mode: forwards;
+  -webkit-text-size-adjust: none;
+  font-size: 2rem;
+  text-decoration: none;
+  white-space: nowrap;
+  font-family: "Kalam", cursive;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 0;
+  }
+  60% {
+    background-position: 450px;
+  }
+  100% {
+    background-position: 450px;
+  }
+}
+
+/*# sourceMappingURL=stylesass.css.map */

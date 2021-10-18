@@ -1,0 +1,22 @@
+$base-font-size: 16px!default;
+
+/* pour supprimer l'unité de la base car on ne peut pas diviser les pixels avec les rem */
+@function strip-unit($number) {
+    @if type-of($number) == 'number' and not unitless($number) {
+      @return $number / ($number * 0 + 1);
+    }
+  
+    @return $number;
+}
+
+/* pour convertir en rem */
+@function rem($size, $base-font-size) {
+    @return 1rem * $size / strip-unit(base);
+}
+
+@function em($size, $base-font-size) {
+    @return 1em * $size / strip-unit(base);
+}
+
+/* Dans le fichier principal, on définit le $base-font-size: 16px */
+

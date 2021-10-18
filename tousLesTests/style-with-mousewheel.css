@@ -1,0 +1,29 @@
+html,
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+main {
+  overflow-x: hidden;
+  display: flex;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4ch;
+}
+
+section:nth-child(even) {
+  background-color: teal;
+  color: white;
+}
