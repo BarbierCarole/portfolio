@@ -1,8 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Nunito:300");
-/* @import url("https://fonts.googleapis.com/css2?family=Allison&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap'); */
-
-
+@import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
 #content-cat {
   position: absolute;
   /* margin-left: calc(45% + 20px);  */
@@ -477,7 +474,7 @@
 
     .wall::after {
         content:"Bouge-moi !";
-        font-family: 'Poppins', sans-serif;
+        font-family: "Kalam", cursive;
         color:#f1dfc8;
     }
     
@@ -493,8 +490,8 @@
         margin-right: calc(-3%);
     }
     .wall::after {
-        content:"Bouge-moi !";
-        font-family: 'Poppins', sans-serif;
+        content:" Bouge-moi !!! ";
+        font-family: 'Kalam', cursive;
         color:#f1dfc8;
     }
     
@@ -516,8 +513,8 @@
         font-size: 48px;
     }
     .wall::after {
-    content:"Bouge-moi !";
-    font-family: 'Poppins', sans-serif;
+    content:" Bouge-moi ! ";
+    font-family: 'Kalam', cursive;
     color:#f1dfc8;
     }
     
