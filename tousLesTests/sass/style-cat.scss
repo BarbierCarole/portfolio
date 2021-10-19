@@ -472,10 +472,12 @@
         margin-right: calc(-3%);
     }
 
-    .wall::after {
-        content:"Bouge-moi !";
-        font-family: "Kalam", cursive;
+    .wall {
+        font-family: 'Kalam', cursive;
         color:#f1dfc8;
+        text-align: center;
+        font-size: 1.1em;
+        text-align: center;
     }
     
 }
@@ -487,15 +489,15 @@
     }
     .ronron {
         bottom: calc(18% + 10px);
-        margin-right: calc(-3%);
+        margin-right: 400px;
     }
-    .wall::after {
-        content:" Bouge-moi !!! ";
+    .wall {
         font-family: 'Kalam', cursive;
         color:#f1dfc8;
+        text-align: center;
+        font-size: 1.1em;
+        text-align: center;
     }
-    
-    
 } 
 
 @media (min-width: 2560px) { 
@@ -506,16 +508,18 @@
 
     .ronron {
         bottom: calc(38% + 10px);
-        margin-right: calc(1%);
+        margin-right: 550px;
     }
     .ronron span {
 
         font-size: 48px;
     }
-    .wall::after {
-    content:" Bouge-moi ! ";
-    font-family: 'Kalam', cursive;
-    color:#f1dfc8;
+    .wall {
+        font-family: 'Kalam', cursive;
+        color:#f1dfc8;
+        text-align: center;
+        font-size: 1.1em;
+        text-align: center;
     }
     
 }
