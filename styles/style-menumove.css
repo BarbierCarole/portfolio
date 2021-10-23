@@ -10,7 +10,7 @@ body {
   perspective: 500px;
 } */
 
-ul {
+.main-nav > ul {
   display: flex;
   flex-direction: column;
   transform: rotatex(10deg);

@@ -19,9 +19,24 @@ main {
     -webkit-overflow-scrolling: touch;
     overflow: scroll hidden;
 }
+/* pour personnaliser la couleur de la scrollbar
+------------------------------------- */
+/* scroll behavior on html */
 
-
-
+/* scrollbar styling non-standard version */
+main::-webkit-scrollbar {
+    width: 2rem;
+    background-color: rgb(117, 112, 121);
+}
+main::-webkit-scrollbar-thumb {
+    background: rgb(131, 5, 189);     
+}
+/* scrollbar styling standard version */
+main {
+    scrollbar-color: rgb(117, 112, 121), rgb(131, 5, 189);
+    scrollbar-width: thin;
+}
+/* -----------*/
 h1 {
 /* font-size: 70px; */
 text-transform: uppercase;
@@ -39,10 +54,10 @@ p, li {
     font-size: 16px;
     font-family: 'Poppins', sans-serif;
 }
-  
+/*   
 section {
     border-right: 4mm ridge rgba(51, 38, 36, 0.822);
-}
+} */
 .wrapper {
     display: flex;
     flex-direction: row;
@@ -237,8 +252,9 @@ stroke-width: 6;
 ******************************************************* */
 
 .competences {
+    /*background-image:  url("../img/contact/bg-contact-1920x1080-sans-tableau.jpg");*/
        
-    background-image:  url("../img/contact/bg-contact-1920x1080-sans-tableau.jpg");
+    background-image:  url("../img/bg/bg-right-1920.jpg");
     /* background-size: contain;
     background-repeat: no-repeat; */
     background-position:  center center; 
@@ -308,16 +324,17 @@ stroke-width: 6;
 ***************************************************** */
 
 .realisations {
-    background-image:  url("../img/15.jpg");
-    /* background-size: contain;
-    background-repeat: no-repeat; */
+    background-image:  url("../img/bg/bg-left-1920.jpg");
+    background-size: contain;
+    background-repeat: no-repeat; 
     background-position:  center center; 
-    background-size: cover;
-}
+    background-size: cover;  
+    padding-top: 100px;
+} 
 
 /* 4 -> mechoisir */
 .mechoisir {
-    background-image:  url("../img/15.jpg");
+    background-image:  url("../img/bg/bg-right-1920.jpg");
     /* background-size: contain;
     background-repeat: no-repeat; */
     background-position:  center center; 
@@ -326,7 +343,7 @@ stroke-width: 6;
 
 /* 5 -> contact */
 .contact {
-    background-image: url("../img/contact/bg-contact-1920x1080.jpg");
+    background-image: url("../img/bg/bg-left-1920.jpg");
     /* background-size: contain;
     background-repeat: no-repeat; */
     background-position:  center center; 
@@ -352,7 +369,7 @@ stroke-width: 6;
 
     /* menu mobile  */
     
-    ul {
+    .main-nav > ul {
         background:rgba(255, 255, 255,.9);
         position:fixed;
         width:50vw;
@@ -366,7 +383,7 @@ stroke-width: 6;
         transition:all 0.3s ease;
         z-index: 1001; 
     }
-    ul.open {
+    .main-nav > ul.open {
     transform:scaleY(1);
     }
     
@@ -408,7 +425,7 @@ stroke-width: 6;
 
     /* menu mobile  */
     
-    ul {
+    .main-nav > ul {
         background:rgba(255, 255, 255,.9);
         position:fixed;
         width:50vw;
@@ -512,7 +529,8 @@ stroke-width: 6;
     .accueil {
         /* "../img/grey-horizontal.jpg" */
         /* background-image:  url("../img/bg-home.jpg"); */
-        background-image:  url("../img/grey-horizontal.jpg");
+        /* background-image:  url("../img/grey-horizontal.jpg"); */
+        background-image: url("../img/bg/bg-left-window-1920.jpg");
         background-position:  center center; 
         background-size: cover;
     }
